@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+        #count {
+            display: block;
+            text-align: center;
+           font-size: 50px;
+        }
+        #buttons{
+          
+            text-align: center;
+
+        }
+    </style>
+  </head>
+  <body>
+    <label id="count">0</label>
+    <br>
+    <div id="buttons">
+    <button id="inc">INC</button>
+    <button id="res">RESET</button>
+    <button id="dec">DEC</button>
+</div>
+  </body>
+</html>
+<script>
+    let count=0;
+    document.getElementById("inc").onclick=function(){
+      count=count+1;
+      document.getElementById("count").innerHTML=count;
+    }
+    document.getElementById("dec").onclick=function(){
+       count=count-1;
+       if(count===0){
+        const counter = document.getElementById("dec").disabled=true;
+             
+    }
+       document.getElementById("count").innerHTML=count;
+    }
+    document.getElementById("res").onclick=function(){
+      count=0;
+      document.getElementById("count").innerHTML=count;
+    }
+</script>
